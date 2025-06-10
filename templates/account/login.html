@@ -3,7 +3,7 @@
 {% load i18n %}
 {% load account socialaccount %}
 
-{% block head_title %}{% trans "Sign In" %}{% endblock %}
+{% block head_title %}{% trans "Log In" %}{% endblock %}
 
 {% block content %}
 
@@ -14,8 +14,7 @@
             <h3 style="text-align: center;">Welcome to GoDrive!</h3>
             <br>
             <p>{% blocktrans %}
-                To book your lessons, view or reschedule your upcoming bookings, or update your details, please <strong>log in</strong> into your account.  
-                <br><br>If you haven't created an account yet, you can <a class="link" href="{{ signup_url }}">sign up</a> to get started.  
+                To book your lessons, view or reschedule your upcoming bookings, or update your details, please <strong>log in</strong> into your account.
             {% endblocktrans %}</p>
         </div>
     </div>
@@ -27,10 +26,20 @@
                 {% if redirect_field_value %}
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
-                <button class="btn" style="background-color: #00cc44; border-color: #00cc44; color: black;" type="submit">{% trans "Sign In" %}</button>
-            </form>
+                <button class="btn" style="background-color: #00cc44; border-color: #00cc44; color: black;" type="submit">{% trans "Log In" %}</button>               
+              </form>
         </div>
     </div>
+     <div class="row">
+        <div class="col-md-8 mt-3 mx-auto offset-md-2">
+            <p>{% blocktrans %}
+                <br>If you haven't created an account yet, <strong>sign up</strong> to get started.</p>
+                {% endblocktrans %} 
+                <a class="btn" style="background-color: white; border-color: #00cc44; color: black;" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a>
+                    
+        </div>
+     </div>
+
 </div>
 
 {% endblock %}

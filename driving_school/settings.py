@@ -47,12 +47,15 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'home'
+    'home',
+    'students'
 ]
 
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+ACCOUNT_FORMS = {'signup': 'yourapp.forms.CustomSignupForm'}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

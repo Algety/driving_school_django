@@ -1,21 +1,44 @@
-{% extends "account/base.html" %}
+{% extends "base.html" %}
 
 {% load i18n %}
 
-{% block head_title %}{% trans "Signup" %}{% endblock head_title %}
+{% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
-<h1>{% trans "Sign Up" %}</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mt-3 mx-auto offset-md-2">
+      <br>
+      <h3 style="text-align: center;">{% trans "Welcome to GoDrive!" %}</h3>
 
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+      <p>{% blocktrans %}
+        
+        <br>
+        Create an account to book lessons, track your progress, and manage your bookings.
+      {% endblocktrans %}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 mt-3 mx-auto offset-md-2">
+      <form class="signup" id="signup_form" method="post"
+        action="{% url 'account_signup' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}"
+          value="{{ redirect_field_value }}"/>
+        {% endif %}
+        <button class="btn" style="background-color: #00cc44; border-color: #00cc44; color: black;" type="submit">
+          {% trans "Sign Up" %}</button>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 mt-3 mx-auto offset-md-2">
+        <p>Already have an account?
+        <a class="link" href="{{ login_url }}">Log in</a> to access your dashboard.</p>
+    </div>
+  </div>
+</div>
 
-<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
-</form>
-
-{% endblock content %}
+{% endblock %}
