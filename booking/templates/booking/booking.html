@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<h2>Book Your Lesson</h2>
+
+<div id="calendar"></div>
+
+<form method="POST">
+    {% csrf_token %}
+    <input  id="selected_date" name="date">
+    <input type="hidden" id="selected_time" name="time">
+    <button type="submit">Confirm Booking</button>
+</form>
+
+{% endblock %}

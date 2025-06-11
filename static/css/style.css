@@ -1,0 +1,80 @@
+:root {
+    --main-color: #00cc44; /* Defines the variable */
+    --second-color: black;
+    --font-size: 16px;
+}
+
+
+/* Brand Logo */
+.navbar-brand .go {
+    color: var(--main-color);
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+.navbar-brand .drive {
+    color: var(--second-color);
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* #phone {
+    color: var(--main-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+    /* letter-spacing: 1px; */
+/* } */
+/* Centered banner in navbar */
+
+.banner {
+    background-color: var(--main-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+/* User icon color */
+.fa-user {
+    color: var(--main-color) !important;
+}
+
+/* Trustpilot icon color */
+.fa-trustpilot {
+    color: var(--main-color) !important;
+}
+
+/* Log Out button */
+.btn-danger {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+    color: black;
+}
+
+
+#front-photo {
+    padding-top: 100px;
+    position: relative;
+    background: url("../images/frontimage.jpg") no-repeat;
+    background-size: cover;
+    background-position: 50% 65%;
+    height: 60vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slogan {
+    margin-top: 10px;
+    color: #ffffff;
+    text-shadow: 0 0 5px #383838, -1px 0px 3px #5c5c5c, 0 0 30px #c9c9c985;
+    font-size: 400%;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#larger {
+    font-size: 600%;
+}
