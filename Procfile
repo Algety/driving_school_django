@@ -1,1 +1,1 @@
-web: gunicorn driving_school_django.wsgi
+web: gunicorn driving_school.wsgi

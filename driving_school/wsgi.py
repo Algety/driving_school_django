@@ -11,6 +11,5 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'driving_school_django.settings')
-
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'driving_school.settings')
 application = get_wsgi_application()
