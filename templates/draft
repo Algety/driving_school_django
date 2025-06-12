@@ -1,0 +1,5 @@
+{{ block.block_image.url }}"
+
+ {% else %}
+                                <img class="card-img-top" src="{% static 'images/default.jpg' %}"
+                                alt="placeholder image">

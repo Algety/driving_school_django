@@ -11,22 +11,20 @@
 <div class="container-fluid">
     <div class="row">
 
+<!-- Banner of the Driving School with locations -->
 <div class="container locations">
     <div class="row justify-content-center">
-        <!-- Banner takes 8 columns -->
-        <div class="col-6 banner text-center">
+        <!-- Banner takes 8/4 columns depending on screen size -->
+        <div class="col-sm-8 col-md-6 col-lg-4 banner text-center">
             <!-- Top row -->
             <div class="row">
                 <div class="col-12">
                     <h1>Driving School</h1>
                 </div>
-                <!-- <div class="col-12">
-                    <h2 class="locations">Cardigan Carmarthen Aberystwyth</h1>
-                </div> -->
             </div>
 
             <!-- Second row: Locations -->
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-12 col-sm-4">
                     <h2>Cardigan</h2>
                 </div>
@@ -41,6 +39,7 @@
     </div>
 </div>
 
+<!-- Section of Services -->
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for block in content_blocks_list %}
@@ -48,25 +47,23 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
-                                </div>
+                                {% if block.block_image %}
+                                <img class="card-img-top" src="{{ block.block_image.url }}" alt="{{ block.title }}">
+                                {% endif %}
                             </div>
-                            <a href="#" class="post-link">
-                                <h2 class="card-title">{{ block.title }}</h2>
-                            </a>
+                            <div class="post-link">
+                                <!-- If there is no image for the block, different style is used -->
+                                <div class="{% if not block.block_image %}decorated{% endif %}">
+                                    <h3 class="card-title">{{ block.title }}</h3>
+                                </div>
+                                <p>{{ block.content }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">
-                {% endif %}
                 {% endfor %}
-
             </div>
         </div>
     </div>
 </div>
-
 {% endblock %}

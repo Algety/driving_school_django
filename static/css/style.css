@@ -70,6 +70,57 @@
     margin-top: 10px;
     color: #ffffff;
     text-shadow: 0 0 5px #383838, -1px 0px 3px #5c5c5c, 0 0 30px #c9c9c985;
+    font-size: 250%;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#larger {
+    font-size: 350%;
+}
+
+/* Home */
+
+    .locations {
+        margin-top: 10px;
+    }
+
+    .locations h1, h2 {
+        color: white;
+        /* font-size: 100%; */
+        margin-top: 3px;
+    }
+
+    .locations h1 {
+        font-size: 120%;
+    }
+
+    .locations h2 {
+        font-size: 100%;
+        padding-bottom: 3px;
+    }
+
+    .card-img-top {
+        size: 300px;
+    }
+
+    .decorated {
+        color: #00cc44;
+    }
+/*---------------------------------------------------------------------------------*/
+/* Media queries */
+
+@media screen and (min-width: 280px) {
+
+
+}
+
+@media screen and (min-width: 992px) {
+    .slogan {
+    margin-top: 10px;
+    color: #ffffff;
+    text-shadow: 0 0 5px #383838, -1px 0px 3px #5c5c5c, 0 0 30px #c9c9c985;
     font-size: 400%;
     font-weight: bold;
     text-transform: uppercase;
@@ -79,10 +130,7 @@
 #larger {
     font-size: 600%;
 }
-
-/* Home */
-
-.locations {
+    .locations {
     margin-top: 15px;
 }
 
@@ -93,10 +141,11 @@
 }
 
 .locations h1 {
-    font-size: 200%;
+    font-size: 150%;
 }
 
 .locations h2 {
-    font-size: 120%;
+    font-size: 100%;
     padding-bottom: 5px;
+}
 }
