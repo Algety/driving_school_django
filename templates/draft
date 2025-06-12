@@ -3,3 +3,5 @@
  {% else %}
                                 <img class="card-img-top" src="{% static 'images/default.jpg' %}"
                                 alt="placeholder image">
+
+                                from home.html <img class="card-img-top" src="{{ block.block_image.url }}" alt="{{ block.title }}">
