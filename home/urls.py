@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import home
+from .views import ContentBlockList
 
 urlpatterns = [
-    path('', home, name='home'),
+    path('', ContentBlockList.as_view(), name='home'),
 ]

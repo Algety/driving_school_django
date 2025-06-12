@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from home.views import home
+# from .views import ContentBlockList
 
 urlpatterns = [
     path('admin/', admin.site.urls),

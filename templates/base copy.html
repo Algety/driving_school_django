@@ -38,7 +38,6 @@
                 <span class="go">GO</span>
                 <span class="drive">DRIVE</span>
             </a>
-            <div class="banner d-lg-none"><a class="nav-link banner" href="{% url 'booking' %}">Book Your Lesson</a></div>
             <!-- <div id="phone">07312345800</div> -->
             <!-- Toggler for mobile menu -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -58,8 +57,8 @@
                 <!-- Expanded Mode, in the center -->
                 <!-- <span class="mx-auto d-none d-lg-block">Driving School in Cardigan</span> -->
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li>
-                        <div class="banner d-none d-lg-block"><a class="nav-link"
+                    <li class="nav-item">
+                        <div class="banner"><a class="nav-link {% if request.path == booking_url %}active{% endif %}" aria-current="page" 
                         href="{% url 'booking' %}">Book Your Lesson</a></div>
                     </li>
                     {% if user.is_authenticated %}

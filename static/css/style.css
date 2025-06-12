@@ -31,6 +31,7 @@
 /* Centered banner in navbar */
 
 .banner {
+    color: rgba(0, 0, 0, .55);
     background-color: var(--main-color);
     font-size: 1rem;
     text-transform: uppercase;
@@ -77,4 +78,25 @@
 
 #larger {
     font-size: 600%;
+}
+
+/* Home */
+
+.locations {
+    margin-top: 15px;
+}
+
+.locations h1, h2 {
+    color: white;
+    /* font-size: 100%; */
+    margin-top: 3px;
+}
+
+.locations h1 {
+    font-size: 200%;
+}
+
+.locations h2 {
+    font-size: 120%;
+    padding-bottom: 5px;
 }
