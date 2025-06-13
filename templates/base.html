@@ -2,7 +2,7 @@
 {% load i18n %}
 
 {% url 'home' as home_url %}
-{% url 'booking' as booking_url %}
+
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -38,7 +38,7 @@
                 <span class="go">GO</span>
                 <span class="drive">DRIVE</span>
             </a>
-            <div class="banner d-lg-none"><a class="nav-link banner" href="{% url 'booking' %}">Book Your Lesson</a></div>
+            <div class="banner d-lg-none"><a class="nav-link banner" href=#>Book Your Lesson</a></div>
             <!-- <div id="phone">07312345800</div> -->
             <!-- Toggler for mobile menu -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -60,7 +60,7 @@
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li>
                         <div class="banner d-none d-lg-block"><a class="nav-link"
-                        href="{% url 'booking' %}">Book Your Lesson</a></div>
+                        href=#>Book Your Lesson</a></div>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
