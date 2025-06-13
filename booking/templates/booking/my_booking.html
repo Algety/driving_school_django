@@ -1,0 +1,31 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<h2>Your Bookings</h2>
+
+<a href="{% url 'booking_new' %}" class="btn btn-success mb-3">Add New Booking</a>
+
+{% if bookings %}
+    <ul class="list-group">
+        {% for booking in bookings %}
+            <li class="list-group-item mb-3">
+                <strong>{{ booking.location }}</strong> — {{ booking.date }} — {{ booking.get_time_slot_display }}
+                <div class="mt-2">
+                    <a href="{% url 'booking_edit' booking.pk %}" class="btn btn-primary btn-sm">Edit</a>
+                    <a href="{% url 'booking_delete' booking.pk %}" class="btn btn-danger btn-sm">Delete</a>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No bookings yet.</p>
+{% endif %}
+
+{% endblock content %}
+
+{% block extras %}
+<script src=#></script>
+{% endblock %}
