@@ -14,7 +14,7 @@
 <!-- Banner of the Driving School with locations -->
 <div class="container locations">
     <div class="row justify-content-center">
-        <!-- Banner takes 8/4 columns depending on screen size -->
+        <!-- Banner takes 8/6/4 columns depending on screen size -->
         <div class="col-sm-8 col-md-6 col-lg-4 banner text-center">
             <!-- Top row -->
             <div class="row">
@@ -52,12 +52,12 @@
                                 {% endif %}
                             </div>
                             <div class="post-link">
-                                <!-- If there is no image for the block, different style is used -->
+                                <!-- If there is no image for the block, different style of is used -->
                                 <div class="{% if not block.block_image %}decorated{% endif %}">
                                     <h3 class="card-title">{{ block.title }}</h3>
                                 </div>
-                                <p>{{ block.content }}</p>
                             </div>
+                            <p>{{ block.content }}</p>
                         </div>
                     </div>
                 </div>

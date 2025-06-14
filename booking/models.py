@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-class Booking(models.Model):
+class LessonBooking(models.Model):
     LOCATION_CHOICES = [
         ('Cardigan', 'Cardigan'),
         ('Carmarthen', 'Carmarthen'),

@@ -1,9 +1,9 @@
 from django import forms
-from .models import Booking
+from .models import LessonBooking
 
 class BookingForm(forms.ModelForm):
     class Meta:
-        model = Booking
+        model = LessonBooking
         fields = ['location', 'date', 'time_slot']
         widgets = {
             'date': forms.DateInput(attrs={'type': 'date'}),
