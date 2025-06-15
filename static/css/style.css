@@ -135,13 +135,36 @@ body {
     margin-left: 9px;
 }
 
+/* Instructors */
+.content-block .image-column {
+    margin-bottom: 1rem;
+}
+
+.content-image {
+    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.content-title {
+    font-weight: 600;
+}
+
+.content-text p {
+    margin-bottom: 0;
+    line-height: 1.6;
+}
 
 /*---------------------------------------------------------------------------------*/
 /* Media queries */
 
-@media screen and (min-width: 280px) {
 
-
+@media screen and (max-width: 760px) {
+    .content-image {
+        max-width: 280px;
+        max-height: 280px;
+    }
 }
 
 @media screen and (min-width: 992px) {

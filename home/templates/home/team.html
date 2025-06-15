@@ -3,30 +3,23 @@
 {% block content %}
 
 <!-- Section of Instructors -->
-        <div class="col-12 mt-20 left">
-            <div class="row">
-                {% for block in content_blocks_list %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                {% if block.block_image %}
-                                <img class="card-image-left" src="{{ block.block_image.url }}" alt="{{ block.title }}">
-                                {% endif %}
-                            </div>
-                            <div class="post-link">
-                                <!-- If there is no image for the block, different style of is used -->
-                                <div class="{% if not block.block_image %}decorated{% endif %}">
-                                    <h3 class="card-title">{{ block.title }}</h3>
-                                </div>
-                            </div>
-                            <p>{{ block.content | safe }}</p>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
+<div class="container content-section py-4">
+    {% for block in content_blocks_list %}
+    <div class="row content-block mb-5 align-items-start">
+        {% if block.block_image %}
+        <div class="col-md-4 text-center image-column">
+            <img src="{{ block.block_image.url }}"
+                 alt="{{ block.title }}"
+                 class="content-image img-fluid rounded">
+        </div>
+        {% endif %}
+        <div class="{% if block.block_image %}col-md-8{% else %}col-12{% endif %} text-column">
+            <h3 class="content-title mb-3">{{ block.title }}</h3>
+            <div class="content-text">
+                <p>{{ block.content|safe }}</p>
             </div>
         </div>
     </div>
+    {% endfor %}
 </div>
 {% endblock %}
