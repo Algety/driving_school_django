@@ -5,6 +5,16 @@
     --font-size: 16px;
 }
 
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+body {
+    padding-top: 60px;
+}
 
 /* Brand Logo */
 .navbar-brand .go {
@@ -98,6 +108,9 @@
         size: 300px;
     }
 
+    .card-image-left {
+        size: 500px;
+    }
     .decorated {
         color: #00cc44;
     }

@@ -2,6 +2,7 @@
 {% load i18n %}
 
 {% url 'home' as home_url %}
+{% url 'team' as team_url %}
 {% url 'my_booking' as my_booking_url %}
 {% url 'booking_new' as booking_new_url %}
 {% url 'account_login' as login_url %}
@@ -64,6 +65,10 @@
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
                         href="{% url 'home' %}">Home</a>
+                    </li>
+                      <li class="nav-item">
+                        <a class="nav-link {% if request.path == team_url %}active{% endif %}" aria-current="page"
+                        href="{% url 'team' %}">Our Instructors</a>
                     </li>
                     
                 </ul>
