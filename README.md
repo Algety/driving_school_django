@@ -9,8 +9,8 @@ This website is designed for an imaginery GoDrive Driving School, based in West 
 
 This website has been created as the third Milestone project for Code Institute's Web Application Development Course. 
 
-![image]![Laptop](static\images\image-2.png)
-![image]![Phone screen](static\images\image-1.png)
+![image]![Laptop](https://github.com/Algety/driving_school_django/blob/main/static/images/image-2.png)
+![image]![Phone screen](https://github.com/Algety/driving_school_django/blob/main/static/images/image-1.png)
 
 ### View the live website [here](https://driving-school-django-4592c5b6512c.herokuapp.com/)
 ***  
@@ -55,6 +55,9 @@ Additionally, the site includes an admin panel, empowering GoDrive team members 
 - Easy content updates across different site sections, the ability to post new content blocks with or without images, depending on the context.
 - Rich-text editing with Summernote, enabling styled formatting for text-based updates.
 - An intuitive database of students and bookings, giving administrators direct oversight of lesson schedules.
+
+### Database Design
+![Alt text](https://github.com/Algety/driving_school_django/blob/main/static/images/tables scheme.png)
 
 
 ## Credits
