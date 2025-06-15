@@ -22,10 +22,5 @@ class LessonBooking(models.Model):
     date = models.DateField()
     time_slot = models.CharField(max_length=20, choices=TIME_SLOT_CHOICES, default="08:00-10:00")
 
-    class Meta:
-        constraints = [
-            models.UniqueConstraint(fields=['location', 'date', 'time_slot'], name='booking_unique')
-        ]
-
     def __str__(self):
         return f"{self.user} - {self.location} on {self.date} at {self.time_slot}"

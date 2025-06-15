@@ -13,7 +13,7 @@
                 <form method="post">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <button type="submit" class="btn btn-success">Book</button>
+                    <button type="submit" class="btn btn-success">Save</button>
                     <a href="{% url 'booking_new' %}" class="btn btn-secondary">Cancel</a>
                 </form>
             </div>

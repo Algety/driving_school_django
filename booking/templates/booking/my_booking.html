@@ -1,4 +1,5 @@
 {% extends 'base.html' %} 
+{% load i18n %}
 {% load static %}
 {% load crispy_forms_tags %}
 
@@ -6,12 +7,92 @@
 
 <h2>Your Bookings</h2>
 
-<a href="{% url 'booking_new' %}" class="btn btn-success mb-3">Add New Booking</a>
+
+<div class="container col-sm-12 col-md-6 mt-4">
+   <a href="{% url 'booking_new' %}" class="btn btn-success mb-3">Add New Booking</a>
+   <div class="table-responsive">
+       <table class="table table-bordered table-striped" data-filter-control="true">
+           <thead>
+               <tr class="table-heading">
+                   <th>Location</th>
+                   <th>Date</th>
+                   <th>Time Slot</th>
+                   <th id="actions">Actions</th>
+               </tr>
+           </thead>
+           <tbody>
+               {% for booking in bookings %}
+               <tr>
+                   <td>{{ booking.location }}</td>
+                   <td>{{ booking.date|date:"d M Y" }}</td>
+                   <td>{{ booking.time_slot }}</td>
+                   <td class="d-flex justify-content-center align-items-center">
+                       <a href="{% url 'booking_edit' booking.pk %}" id="edit">
+                           <i class="fa-solid fa-pencil"></i>
+                       </a>
+                       <a href="#" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="{{ booking.pk }}" 
+                       data-location="{{ booking.location }}" data-date="{{ booking.date|date:'d M Y' }}" 
+                        data-time="{{ booking.time_slot }}" id="delete">
+                           <i class="fa-solid fa-square-xmark"></i>
+                       </a>
+                   </td>
+               </tr>
+               {% endfor %}
+           </tbody>
+       </table>
+   </div>
+</div>
 
 
+<!-- Deletion Confirmation Modal -->
+
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirm Deletion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="deleteMessage">{{ booking.pk }}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <form id="deleteForm" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var deleteModal = document.getElementById("deleteModal");
+    if (!deleteModal) return;
+
+    deleteModal.addEventListener("show.bs.modal", function (event) {
+        var button = event.relatedTarget;
+        if (!button) return;
+
+        var bookingId = button.getAttribute("data-id");
+        var location = button.getAttribute("data-location");
+        var date = button.getAttribute("data-date");
+        var timeSlot = button.getAttribute("data-time");
+        var deleteMessage = document.getElementById("deleteMessage");
+        if (deleteMessage) {
+            deleteMessage.textContent = "Delete the lesson in " + location + " on " + date + " at " + timeSlot + "?"
+        }
+        var form = document.getElementById("deleteForm");
+        if (form) {
+            form.action = "/booking/delete/" + bookingId + "/";
+        }
+    });
+});
+</script>
 
 {% endblock content %}
 
 {% block extras %}
-<script src=#></script>
 {% endblock %}

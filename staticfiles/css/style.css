@@ -1,6 +1,7 @@
 :root {
     --main-color: #00cc44; /* Defines the variable */
     --second-color: black;
+    --third-color: #198754;
     --font-size: 16px;
 }
 
@@ -38,12 +39,7 @@
 }
 
 /* User icon color */
-.fa-user {
-    color: var(--main-color) !important;
-}
-
-/* Trustpilot icon color */
-.fa-trustpilot {
+.fa-user, .green-text {
     color: var(--main-color) !important;
 }
 
@@ -88,15 +84,12 @@
 
     .locations h1, h2 {
         color: white;
-        /* font-size: 100%; */
         margin-top: 3px;
-    }
-
-    .locations h1 {
         font-size: 120%;
     }
 
     .locations h2 {
+        color: white;
         font-size: 100%;
         padding-bottom: 3px;
     }
@@ -108,6 +101,28 @@
     .decorated {
         color: #00cc44;
     }
+
+/* My booking */
+
+#green-text {
+    color: var(--third-color);
+}
+
+.table-heading {
+    background-color:#198754;
+    color: white;
+}
+#edit {
+    color:#198754;
+    margin-right: 9px;
+}
+
+#delete {
+    color: #87193a;
+    margin-left: 9px;
+}
+
+
 /*---------------------------------------------------------------------------------*/
 /* Media queries */
 
@@ -130,17 +145,14 @@
 #larger {
     font-size: 600%;
 }
-    .locations {
+.locations {
     margin-top: 15px;
 }
 
-.locations h1, h2 {
+.locations h1 {
     color: white;
     /* font-size: 100%; */
     margin-top: 3px;
-}
-
-.locations h1 {
     font-size: 150%;
 }
 

@@ -164,3 +164,64 @@ for booking_new.html
 {% else %}
     <p>No bookings yet.</p>
 {% endif %}
+
+
+-------------------------------------
+booking_new
+
+{% if form.non_field_errors %}
+    <div class="alert alert-danger mt-3">
+        {{ form.non_field_errors }}
+    </div>
+{% endif %}
+
+
+-------------------------------------
+views
+@login_required
+def booking_new(request):
+    if request.method == 'POST':
+        form = BookingForm(request.POST)
+        if LessonBooking.objects.filter(date=request.date, location=request.location, time_slot=request.time_slot):
+        booking = form.save(commit=False)
+        if form.is_valid():
+            booking.user = request.user
+            booking.save()
+            messages.success(request, "Booking created successfully!")
+            return redirect('my_booking')
+        else:
+            messages.error(request, "This time slot is not available.")
+
+        # if form.is_valid():
+        #     booking = form.save(commit=False)
+        #     booking.user = request.user
+        #     booking.save()
+        #     messages.success(request, "Booking created successfully!")
+        #     return redirect('my_booking')
+    else:
+        form = BookingForm()
+    return render(request, 'booking/booking_new.html', {'form': form})
+-------------------------------------------
+AC1 Given a logged-in user, they can modify their comment
+
+----------------------------------------------
+ <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <form method="post" action="{% url 'account_logout' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
