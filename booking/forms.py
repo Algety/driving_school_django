@@ -1,5 +1,5 @@
 from django import forms
-from datetime import date
+from datetime import date, timedelta
 from .models import LessonBooking
 
 class BookingForm(forms.ModelForm):
