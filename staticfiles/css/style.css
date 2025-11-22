@@ -5,37 +5,41 @@
     --font-size: 16px;
 }
 
+/* Navbar height */
+body { 
+    padding-top: 70px; 
+}
 
 /* Brand Logo */
+.navbar-brand {
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.9px;
+}
+
 .navbar-brand .go {
     color: var(--main-color);
-    font-weight: bold;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 2rem;
-    letter-spacing: 1px;
 }
+
 .navbar-brand .drive {
     color: var(--second-color);
-    font-weight: bold;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 2rem;
-    letter-spacing: 1px;
 }
 
-/* #phone {
-    color: var(--main-color);
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-family: 'Segoe UI', sans-serif;
-    /* letter-spacing: 1px; */
-/* } */
 /* Centered banner in navbar */
-
 .banner {
     color: rgba(0, 0, 0, .55);
     background-color: var(--main-color);
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
+}
+
+.nav-link {
+    padding: 0.3 1rem;
+}
+
+.navbar-toggler {
+    font-size: 1rem !important;
 }
 
 /* User icon color */
@@ -128,6 +132,26 @@
 
 @media screen and (min-width: 280px) {
 
+
+}
+
+@media screen and (min-width: 446px) {
+.navbar-brand {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.banner {
+    font-size: 1rem;
+}
+
+.navbar-toggler {
+    font-size: 1.25rem !important;
+}
+
+body { 
+    padding-top: 102px; 
+}
 
 }
 

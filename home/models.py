@@ -9,13 +9,11 @@ SECTION = [
     ]
 class ContentBlock(models.Model):
     title = models.CharField(max_length=255)
-    # image = models.ImageField(upload_to="infoblocks/")
     content = models.TextField()
-    # content = SummernoteTextField()
     section = models.CharField(max_length=20, choices=SECTION, default="services")
     publish = models.BooleanField(default=True)
     block_image = CloudinaryField('image', blank=True, null=True)
-    order = models.PositiveIntegerField(default=0)  # New field for sorting
+    order = models.PositiveIntegerField(default=0)
 
 
     class Meta:

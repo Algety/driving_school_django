@@ -44,7 +44,7 @@
 
     <!-- Navigation -->
     
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
         <div class="container-fluid">
             <!-- Brand Logo -->
             <a class="navbar-brand" href="{% url 'home' %}">
@@ -54,7 +54,7 @@
             <div class="banner d-lg-none">
                 <a class="nav-link banner" href="{% url 'booking_new' %}">Book Your Lesson</a>
             </div>
-            <!-- <div id="phone">07312345800</div> -->
+            
             <!-- Toggler for mobile menu -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,7 +62,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <!-- Collapsed Mode: First in the list-->
-                
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
@@ -75,7 +74,6 @@
                     
                 </ul>
                 <!-- Expanded Mode, in the center -->
-                <!-- <span class="mx-auto d-none d-lg-block">Driving School in Cardigan</span> -->
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li>
                         <div class="banner d-none d-lg-block">
@@ -117,7 +115,7 @@
     </div>
     <main class="flex-shrink-0 main-bg">
         {% block content %}
-        <!-- Content Goes here -->
+        <!-- Content block -->
         {% endblock content %}
     </main>
 

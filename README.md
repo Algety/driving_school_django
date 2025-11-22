@@ -1,6 +1,6 @@
 # GoDrive Driving school in Wales
 
-This website is designed for an imaginary GoDrive Driving School, based in West Wales. It aims to attract new learners and support current learners by providing clear, accessible information about the school's driving lessons and instructors, and convenient functionality for lessons managing. The site features:
+This website is designed for an imaginary GoDrive Driving School, based in West Wales. It aims to attract new learners and support current learners by providing clear, accessible information about the school's driving lessons and instructors, and convenient functionality for managing lessons. The site features:
 - A Home page introducing the various types of driving lessons available, including beginner sessions, refresher courses, and intensive driving programs.
 - An Our Team page showcasing GoDrive’s certified instructors, their qualifications, and their unique approach to learner success.
 - A Booking page where new users can easily schedule lessons online.
@@ -59,6 +59,25 @@ Additionally, the site includes an admin panel, empowering GoDrive team members 
 ### Database Design
 ![ERD](https://github.com/Algety/driving_school_django/blob/main/static/images/ERD_driving_school.jpeg)
 
+## Planned Scope of Work for future implementation
+The project will be expanded to include instructor-specific lesson bookings, with the option to choose a lesson type:
+
+### 1. Instructor Integration
+- A new **Instructors app** will be created to manage a list of instructors.  
+- The app will store and manage details for each instructor (first and last name, contact info, photo, availability, specialization, and experience).
+- Instructor’s blocks on the *Our Instructors* page will display the details stored in the Instructors app.
+- A **“Book a Lesson”** button will be added at the end of each instructor’s block on the *Our Instructors* page, allowing users to book a lesson with a specific instructor.   
+
+### 2. Booking System Extension
+- The **LessonBooking** model will be extended with an instructor field - a foreign Key to **Instructor** model to create a **one-to-many relationship**: one instructor can have many bookings.  
+- Users will be able to select a specific instructor when booking a lesson.  
+- Validation Logic will be added to prevent booking of more than one lesson with the same instructor in the same time slot. 
+
+### 3. Lesson Type Selection
+- A new field **lesson type** (e.g., theory, practical, refresher) will be added to the **LessonBooking** model and the booking form, with a list of lesson types. Booking a lesson, a user will be able to choose a type of a lesson (optionally). 
+
+### 4. Time Slot Availability
+- On the *Book a Lesson* page, the booking form will show only available time slots for the user to select.
 
 ## Credits
 ### Content
