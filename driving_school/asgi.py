@@ -9,6 +9,10 @@ https://docs.djangoproject.com/en/4.2/howto/deployment/asgi/
 
 import os
 
+# load local env.py if present
+if os.path.exists('env.py'):
+    import env
+    
 from django.core.asgi import get_asgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'driving_school.settings')
