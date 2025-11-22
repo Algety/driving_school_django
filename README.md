@@ -9,8 +9,8 @@ This website is designed for an imaginery GoDrive Driving School, based in West 
 
 This website has been created as the third Milestone project for Code Institute's Web Application Development Course. 
 
-![image]![Laptop](https://github.com/Algety/driving_school_django/blob/main/static/images/image-2.png)
-![image]![Phone screen](https://github.com/Algety/driving_school_django/blob/main/static/images/image-1.png)
+![Laptop](https://github.com/Algety/driving_school_django/blob/main/static/images/image-2.png)
+![Phone screen](https://github.com/Algety/driving_school_django/blob/main/static/images/image-1.png)
 
 ### View the live website [here](https://driving-school-django-4592c5b6512c.herokuapp.com/)
 ***  
@@ -57,7 +57,7 @@ Additionally, the site includes an admin panel, empowering GoDrive team members 
 - An intuitive database of students and bookings, giving administrators direct oversight of lesson schedules.
 
 ### Database Design
-![Alt text](https://github.com/Algety/driving_school_django/blob/main/static/images/tables scheme.png)
+![ERD](https://github.com/Algety/driving_school_django/blob/main/static/images/ERD_driving_school.jpeg)
 
 
 ## Credits
@@ -67,5 +67,6 @@ Additionally, the site includes an admin panel, empowering GoDrive team members 
 3. Favicon sized with [Favicon Io](https://favicon.io/favicon-converter/)
 4. Free images and AI generating - [Freepik](https://www.freepik.com/)
 5. Image resizer - [Imageresizer](https://imageresizer.com/)
+6. ERD (Entity Relationship Diagram) of the models created with help [Lucid.app](https://lucid.app/)
 ### Code
 1. Code samples have been adapted specifically for the site - [Bootstrap Documentation](https://getbootstrap.com/docs/5.3/), Code Institute lectures code.
