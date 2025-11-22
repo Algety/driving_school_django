@@ -46,11 +46,12 @@ To achieve these goals, the site should:
 
 ## Design
 ### Website Structure
-The GoDrive Driving School website consists of four primary pages: Home Page, Our Team, Booking a Lesson Page, and User's Bookings. The default landing page is the Home Page, which includes a navigation bar and a consistent footer across all pages for easy access and site-wide cohesion.
+The GoDrive Driving School website consists of four primary pages: Home Page, Our Instructors, Book Your Lesson Page, and User's Bookings. The default landing page is the Home Page, which includes a navigation bar and a consistent footer across all pages for easy access and site-wide cohesion. The navbar is fixed at the top, so when a user is scrolling down a page, the navbar and the book a lesson button stay visible and available all the time.
 The Home Page welcomes visitors with an engaging banner and an overview of the different lesson types offered, such as manual and automatic driving lessons, motorway driving lessons, Pass Plus course, intensive training, and refresher courses. It also links to instructor profiles and the booking system via the top navigation menu.
-The Our Team page introduces GoDrive’s certified driving instructors, offering insight into their experience, teaching approach, helping visitors feel confident in their choice of instructor.
+The Our Instructors page introduces GoDrive’s certified driving instructors, offering insight into their experience, teaching approach, helping visitors feel confident in their choice of instructor.
 The Booking Page allows new users to select a location (Cardigan, Carmarthen, Aberystwyth), lesson date, and time slot through a dynamic booking form. Prefilled values and validation features enhance usability and reduce friction in the booking process.
-After a booking is submitted, users are redirected to the User's Bookings page, where they can view, edit, or delete upcoming lessons. The site also displays real-time success messages after actions like booking or cancellation, further improving the experience.
+After a booking is submitted, users are redirected to the User's Bookings page, where they can view, edit, or delete upcoming lessons.
+The site also displays real-time success messages after actions like booking or cancellation, further improving the experience.
 Additionally, the site includes an admin panel, empowering GoDrive team members to manage content without external technical support. This panel allows:
 - Easy content updates across different site sections, the ability to post new content blocks with or without images, depending on the context.
 - Rich-text editing with Summernote, enabling styled formatting for text-based updates.
@@ -79,6 +80,57 @@ The project will be expanded to include instructor-specific lesson bookings, wit
 ### 4. Time Slot Availability
 - On the *Book a Lesson* page, the booking form will show only available time slots for the user to select.
 
+## Deployment
+
+### Local Setup
+For this project a PostgreSQL database is used.
+
+**Prerequisites:**
+- Python 3.x, Git, and PostgreSQL installed and running  
+- Recommended: create a virtual environment for the project  
+
+1. Clone or fork this repository to create a local copy on your machine.  
+2. Create and activate a virtual environment:  
+   - Windows: python -m venv .venv then .\.venv\Scripts\activate  
+   - macOS/Linux: python3 -m venv .venv then source .venv/bin/activate  
+3. Install the Python dependencies listed in requirements.txt with the command: pip install -r requirements.txt  
+4. In PostgreSQL, create a database and user.  
+5. Create a new file env.py at the root level and add environment variables:  
+import os
+    os.environ['SECRET_KEY'] = '<your-secret-key>'
+    os.environ['DATABASE_URL'] = 'postgresql://user:pass@localhost:5432/dbname'
+    os.environ['CLOUDINARY_URL'] = 'cloudinary://API_KEY:API_SECRET@CLOUD_NAME'  
+6. Install the packages required to connect to PostgreSQL and update requirements.txt: pip install dj-database-url~=0.5 psycopg2~=2.9 then pip freeze --local > requirements.txt  
+7. In settings.py, connect to env.py:  
+   import dj_database_url  
+   if os.path.isfile('env.py'): import env  
+8. Remove or comment out the default SQLite configuration.  
+9. Configure the database to use the DATABASE_URL environment variable: DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}  
+10. Add env.py to .gitignore.  
+11. Ensure env.py is loaded before Django settings by importing it at the top of manage.py, wsgi.py, and asgi.py.  
+12. Run migrations: python manage.py makemigrations and python manage.py migrate  
+13. Create a superuser: python manage.py createsuperuser  
+14. Start the Django app: python manage.py runserver  
+    - Stop the app with CTRL+C (⌘+C on Mac).  
+    - To run it again, use the same command: python manage.py runserver  
+
+### Heroku Deployment
+1. Sign in to Heroku, click New → Create New App, choose a region, and click Create.  
+2. In the Settings tab, reveal Config Vars. Add a key DISABLE_COLLECTSTATIC with value 1.  
+3. Install a production webserver: pip install gunicorn~=20.1  
+4. Update requirements.txt: pip freeze --local > requirements.txt  
+5. Create a file named Procfile (no extension) in the project root. Add: web: gunicorn driving_school.wsgi 
+6. In settings.py, add the Heroku app hostname to ALLOWED_HOSTS: ALLOWED_HOSTS = ['app-name.herokuapp.com']  
+7. Set DEBUG = False in settings.py.  
+8. Push changes to GitHub: git add . , git commit -m "Prepare for Heroku deployment" , git push  
+9. On Heroku, go to Deploy → Deployment Method and select GitHub.  
+10. Connect your GitHub repository in the Connect to GitHub section.  
+11. Under Manual Deploy, select the main branch and click Deploy Branch.  
+12. In the Resources tab, enable an Eco Dyno (free tier).  
+13. Verify there is no conflicting Postgres add-on if you are using your own database.  
+14. Click Open App to view your deployed project.  
+
+
 ## Credits
 ### Content
 1. The icons - [Font Awesome](https://fontawesome.com/)
@@ -87,5 +139,6 @@ The project will be expanded to include instructor-specific lesson bookings, wit
 4. Free images and AI generating - [Freepik](https://www.freepik.com/)
 5. Image resizer - [Imageresizer](https://imageresizer.com/)
 6. ERD (Entity Relationship Diagram) of the models created with help [Lucid.app](https://lucid.app/)
+
 ### Code
 1. Code samples have been adapted specifically for the site - [Bootstrap Documentation](https://getbootstrap.com/docs/5.3/), Code Institute lectures code.
