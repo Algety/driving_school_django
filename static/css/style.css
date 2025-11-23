@@ -9,7 +9,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 1050;
 }
 
 body {
@@ -31,15 +31,6 @@ body {
     font-size: 2rem;
     letter-spacing: 1px;
 }
-
-/* #phone {
-    color: var(--main-color);
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-family: 'Segoe UI', sans-serif;
-    /* letter-spacing: 1px; */
-/* } */
-/* Centered banner in navbar */
 
 .banner {
     color: rgba(0, 0, 0, .55);
@@ -105,12 +96,18 @@ body {
     }
 
     .card-img-top {
-        size: 300px;
+        width: 100%;
+        height: auto;
+        display: block;
     }
 
     .card-image-left {
-        size: 500px;
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        display: block;
     }
+    
     .decorated {
         color: #00cc44;
     }
@@ -159,8 +156,6 @@ body {
 
 /*---------------------------------------------------------------------------------*/
 /* Media queries */
-
-
 @media screen and (max-width: 760px) {
     .content-image {
         max-width: 280px;
@@ -188,7 +183,6 @@ body {
 
 .locations h1 {
     color: white;
-    /* font-size: 100%; */
     margin-top: 3px;
     font-size: 150%;
 }

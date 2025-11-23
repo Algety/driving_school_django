@@ -80,6 +80,43 @@ The project will be expanded to include instructor-specific lesson bookings, wit
 ### 4. Time Slot Availability
 - On the *Book a Lesson* page, the booking form will show only available time slots for the user to select.
 
+## Testing
+### Responsiveness
+The project was tested using the Chrome Developer Tools and Amiresponsive site to verify responsiveness of the site.
+
+Devices tested using the Google Developer Tools emulator:
+iPhone XR
+iPhone 12 Pro
+iPhone 14 Pro Max
+Pixel 7
+Samsung Galaxy S8+
+Samsung Galaxy S20 Ultra
+iPad Mini
+iPad Air
+iPad Pro
+Surface Pro 7
+Surface Duo
+Galaxy Z Fold 5
+Asus Zenbook Fold
+Samsung Galaxy A51/71
+Nest Hub
+Nest Hub Max
+
+
+![Responsiveness](https://github.com/Algety/driving_school_django/blob/main/static/images/responsive_check.jpg)
+![Responsiveness](https://github.com/Algety/driving_school_django/blob/main/static/images/responsive_check_2.jpg)
+![Responsiveness](https://github.com/Algety/driving_school_django/blob/main/static/images/responsive_check_3.jpg)
+
+All the pages of the site are displayed correctly on different devices.
+
+### HTML, CSS and JS Validation
+The W3C Markup Validator and W3C CSS Validator services were used to validate the project's pages for syntax errors. The screenshots below provide the results of testing.
+
+### Performance Accessibility and SEO
+Google Lighthouse was used to test Performance, Best Practices, Accessibility and SEO.
+
+### 
+
 ## Deployment
 
 ### Local Setup
