@@ -2,7 +2,7 @@
 
 This website is designed for an imaginary GoDrive Driving School, based in West Wales. It aims to attract new learners and support current learners by providing clear, accessible information about the school's driving lessons and instructors, and convenient functionality for managing lessons. The site features:
 - A Home page introducing the various types of driving lessons available, including beginner sessions, refresher courses, and intensive driving programs.
-- An Our Team page showcasing GoDrive’s certified instructors, their qualifications, and their unique approach to learner success.
+- An Our Instructors page showcasing GoDrive’s certified instructors, their qualifications, and their unique approach to learner success.
 - A Booking page where new users can easily schedule lessons online.
 - A User's Bookings page where registered learners can view, update, or cancel their existing lessons.
 - An Authorisation section for users to register or log in to their personal accounts.
@@ -19,7 +19,7 @@ This website has been created as the third Milestone project for Code Institute'
 The primary goals of the GoDrive Driving School website are to:
 - Attract more learners and increase lesson bookings.
 - Establish credibility and trust with both prospective and existing learners.
-- Strengthen brand recognition across Wales and beyond.
+- Strengthen brand recognition across local area and Wales (with perspective of opening new branches across the UK).
 - Provide the GoDrive team with a convenient tool for maintaining content, tracking learners, and organizing bookings.
 
 To achieve these goals, the site should:
@@ -39,9 +39,9 @@ To achieve these goals, the site should:
 - As a learner, I want to log in and view my upcoming driving lessons so I can keep track of my schedule.
 - As a learner, I’d like to edit or cancel bookings if my availability changes.
 #### Team member
-- As a GoTeam member, I want to log in securely and manage lesson bookings to stay on top of scheduling.
-- As a GoTeam member, I want to view, add, update, or delete lessons to reflect current availability.
-- As a GoTeam member, I want the ability to update site content (like lesson types or instructor bios) without needing technical support.
+- As a GoDrive team member, I want to log in securely and manage lesson bookings to stay on top of scheduling.
+- As a GoDrive team member, I want to view, add, update, or delete lessons to reflect current availability.
+- As a GoDrive team member, I want the ability to update site content (like lesson types or instructor bios) without needing technical support.
 
 
 ## Design
