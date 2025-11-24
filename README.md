@@ -65,7 +65,7 @@ Home page
 ![Wireframe Home](https://github.com/Algety/driving_school_django/blob/main/static/images/homepage_laptop.png)
 ![Wireframe Home](https://github.com/Algety/driving_school_django/blob/main/static/images/homepage_tablet_mobile.jpg)
 
-Our instructors page
+Our Instructors page
 ![Wireframe Home](https://github.com/Algety/driving_school_django/blob/main/static/images/instructors_laptop_wf.jpg)
 ![Wireframe Home](https://github.com/Algety/driving_school_django/blob/main/static/images/instructors_tablet_mobile_wf.jpg)
 
@@ -125,8 +125,19 @@ All the pages of the site are displayed correctly on different devices.
 ### HTML, CSS and JS Validation
 The W3C Markup Validator and W3C CSS Validator services were used to validate the project's pages for syntax errors. The screenshots below provide the results of testing.
 
+HTML validation
+![HTML validation](https://github.com/Algety/driving_school_django/blob/main/static/images/html_validation.jpg)
+
+CSS validation
+![CSS validation](https://github.com/Algety/driving_school_django/blob/main/static/images/css_validation.jpg)
+
 ### Performance Accessibility and SEO
 Google Lighthouse was used to test Performance, Best Practices, Accessibility and SEO.
+
+![Lighthouse check](https://github.com/Algety/driving_school_django/blob/main/static/images/lighthouse_validation.jpg)
+
+The Lighthouse Best Practices score is 78%. The main factors lowering the score are third‑party cookies from Cloudinary.
+![Lighthouse check](https://github.com/Algety/driving_school_django/blob/main/static/images/lighthouse_validation_2.jpg)
 
 ### 
 
