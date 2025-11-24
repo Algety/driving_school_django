@@ -140,9 +140,18 @@ The Lighthouse Best Practices score is 78%. The main factors lowering the score 
 ![Lighthouse check](https://github.com/Algety/driving_school_django/blob/main/static/images/lighthouse_validation_2.jpg)
 
 ### JS validation
-JSHint was used for js script validation.
+JSHint was used for js script validation of the js files of the project.
 
 ![JSHint](https://github.com/Algety/driving_school_django/blob/main/static/images/jshint_validation.jpg)
+
+### Manual testing
+The site was tested by clicking all nav links, verifying modals, and ensuring resilience against missing images.
+
+![Manual](https://github.com/Algety/driving_school_django/blob/main/static/images/manual_testing.jpg)
+
+![Manual](https://github.com/Algety/driving_school_django/blob/main/static/images/manual_testing_2.jpg)
+
+
 
 ## Deployment
 
