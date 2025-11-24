@@ -5,41 +5,38 @@
     --font-size: 16px;
 }
 
-/* Navbar height */
-body { 
-    padding-top: 102px; 
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1050;
+}
+
+body {
+    padding-top: 60px;
 }
 
 /* Brand Logo */
-.navbar-brand {
-    font-weight: bold;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 1.8rem;
-    letter-spacing: 0.9px;
-}
-
 .navbar-brand .go {
     color: var(--main-color);
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
 }
-
 .navbar-brand .drive {
     color: var(--second-color);
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
 }
 
-/* Centered banner in navbar */
 .banner {
     color: rgba(0, 0, 0, .55);
     background-color: var(--main-color);
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-transform: uppercase;
-}
-
-.nav-link {
-    padding: 0.3 1rem;
-}
-
-.navbar-toggler {
-    font-size: 1rem !important;
 }
 
 /* User icon color */
@@ -99,9 +96,18 @@ body {
     }
 
     .card-img-top {
-        size: 300px;
+        width: 100%;
+        height: auto;
+        display: block;
     }
 
+    .card-image-left {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        display: block;
+    }
+    
     .decorated {
         color: #00cc44;
     }
@@ -126,33 +132,35 @@ body {
     margin-left: 9px;
 }
 
+/* Instructors */
+
+.content-block .image-column {
+    margin-bottom: 1rem;
+}
+
+.content-image {
+    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.content-title {
+    font-weight: 600;
+}
+
+.content-text p {
+    margin-bottom: 0;
+    line-height: 1.6;
+}
 
 /*---------------------------------------------------------------------------------*/
 /* Media queries */
-
-@media screen and (min-width: 280px) {
-
-
-}
-
-@media screen and (min-width: 446px) {
-.navbar-brand {
-    font-size: 2rem;
-    letter-spacing: 1px;
-}
-
-.banner {
-    font-size: 1rem;
-}
-
-.navbar-toggler {
-    font-size: 1.25rem !important;
-}
-
-body { 
-    padding-top: 70px; 
-}
-
+@media screen and (max-width: 760px) {
+    .content-image {
+        max-width: 280px;
+        max-height: 280px;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -175,7 +183,6 @@ body {
 
 .locations h1 {
     color: white;
-    /* font-size: 100%; */
     margin-top: 3px;
     font-size: 150%;
 }
