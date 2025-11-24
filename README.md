@@ -15,6 +15,26 @@ This website has been created as the third Milestone project for Code Institute'
 ### View the live website [here](https://driving-school-django-4592c5b6512c.herokuapp.com/)
 ***  
 
+## Contents
+
+- [Site Goals](#site-goals)
+- [User Experience - UX](#user-experience---ux)
+  - [User stories](#user-stories)
+- [Design](#design)
+  - [Website Structure](#website-structure)
+  - [Database Design](#database-design)
+  - [Wireframes](#wireframes)
+- [Planned Scope of Work for future implementation]
+- [Testing](#testing)
+  - [Responsiveness](#responsiveness)
+  - [HTML, CSS and JS Validation](#html-css-and-js-validation)
+  - [Performance Accessibility and SEO](#performance-accessibility-and-seo)
+  - [JS validation](#js-validation)
+  - [Manual testing](#manual-testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
+
+
 ## Site Goals
 The primary goals of the GoDrive Driving School website are to:
 - Attract more learners and increase lesson bookings.
@@ -150,7 +170,6 @@ The site was tested by clicking all nav links, verifying modals, and ensuring re
 ![Manual](https://github.com/Algety/driving_school_django/blob/main/static/images/manual_testing.jpg)
 
 ![Manual](https://github.com/Algety/driving_school_django/blob/main/static/images/manual_testing_2.jpg)
-
 
 
 ## Deployment
