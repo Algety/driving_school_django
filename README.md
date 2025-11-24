@@ -60,6 +60,19 @@ Additionally, the site includes an admin panel, empowering GoDrive team members 
 ### Database Design
 ![ERD](https://github.com/Algety/driving_school_django/blob/main/static/images/ERD_driving_school.jpeg)
 
+### Wireframes
+Home page
+![Wireframe Home](https://github.com/Algety/driving_school_django/blob/main/static/images/homepage_laptop.png)
+![Wireframe Home](https://github.com/Algety/driving_school_django/blob/main/static/images/homepage_tablet_mobile.jpg)
+
+Our instructors page
+![Wireframe Home](https://github.com/Algety/driving_school_django/blob/main/static/images/instructors_laptop_wf.jpg)
+![Wireframe Home](https://github.com/Algety/driving_school_django/blob/main/static/images/instructors_tablet_mobile_wf.jpg)
+
+User`s bookings page
+![Wireframe Home](https://github.com/Algety/driving_school_django/blob/main/static/images/booking_laptop_wf.jpg)
+![Wireframe Home](https://github.com/Algety/driving_school_django/blob/main/static/images/booking_tablet_mobile_wf.jpg)
+
 ## Planned Scope of Work for future implementation
 The project will be expanded to include instructor-specific lesson bookings, with the option to choose a lesson type:
 
@@ -178,4 +191,4 @@ import os
 6. ERD (Entity Relationship Diagram) of the models created with help [Lucid.app](https://lucid.app/)
 
 ### Code
-1. Code samples have been adapted specifically for the site - [Bootstrap Documentation](https://getbootstrap.com/docs/5.3/), Code Institute lectures code.
+1. Code samples have been adapted specifically for the site - [Bootstrap Documentation](https://getbootstrap.com/docs/5.3/), Code Institute lectures code ("I think therefore I blog" Walkthrough project).
