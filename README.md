@@ -139,7 +139,10 @@ Google Lighthouse was used to test Performance, Best Practices, Accessibility an
 The Lighthouse Best Practices score is 78%. The main factors lowering the score are third‑party cookies from Cloudinary.
 ![Lighthouse check](https://github.com/Algety/driving_school_django/blob/main/static/images/lighthouse_validation_2.jpg)
 
-### 
+### JS validation
+JSHint was used for js script validation.
+
+![JSHint](https://github.com/Algety/driving_school_django/blob/main/static/images/jshint_validation.jpg)
 
 ## Deployment
 
@@ -200,6 +203,7 @@ import os
 4. Free images and AI generating - [Freepik](https://www.freepik.com/)
 5. Image resizer - [Imageresizer](https://imageresizer.com/)
 6. ERD (Entity Relationship Diagram) of the models created with help [Lucid.app](https://lucid.app/)
+7. Wireframes created with [Visily](https://app.visily.ai/)
 
 ### Code
 1. Code samples have been adapted specifically for the site - [Bootstrap Documentation](https://getbootstrap.com/docs/5.3/), Code Institute lectures code ("I think therefore I blog" Walkthrough project).
